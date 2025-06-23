@@ -2,6 +2,8 @@ import React from "react";
 import digi from "../assets/digi.png";
 import handwriting from "../assets/handwriting.png";
 import Nav from "../components/Nav";
+import { Link } from "react-router";
+import Technologies from "../components/Technologies";
 
 const Home = () => {
   return (
@@ -15,20 +17,37 @@ const Home = () => {
               student who is interested in creating{" "}
               <span className="italic">software</span>.
             </p>
-            <p>LinkedIn</p>
-            <p>Github</p>
+            <Link
+              className="underline underline-offset-8 decoration-1"
+              to="https://www.linkedin.com/in/khue-pham-3b285b327/"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              className="underline underline-offset-8 decoration-1"
+              to="https://github.com/khuengocminhpham"
+            >
+              Github
+            </Link>
           </div>
         </div>
       </div>
 
-      <div className="absolute top-40 left-1/3">
+      <div className="absolute top-32 left-1/3">
         <img
           src={handwriting}
           alt="khue's space"
           className="w-128 top-12 absolute -rotate-6"
         />
         <img src={digi} alt="digi-camera" className="-rotate-[87deg]" />
+        <Link
+          to="/about"
+          className="italic text-2xl absolute top-[80%] right-4 text-color underline underline-offset-8 decoration-1"
+        >
+          i would love to have a chat with you!💬
+        </Link>
       </div>
+      <Technologies />
     </>
   );
 };
