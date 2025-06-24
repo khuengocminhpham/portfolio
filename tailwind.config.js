@@ -4,6 +4,15 @@ export default {
   presets: [],
   darkMode: "media", // or 'class'
   theme: {
+    extend: {
+      fontFamily: {
+        "instrument-sans": ["Instrument Sans", "sans-serif"],
+        "instrument-serif": ["Instrument Serif", "serif"],
+      },
+      colors: {
+        grey: "#969696",
+      },
+    },
     accentColor: ({ theme }) => ({
       ...theme("colors"),
       auto: "auto",
@@ -314,6 +323,7 @@ export default {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
+        "Instrument Sans",
       ],
       serif: [
         "ui-serif",
