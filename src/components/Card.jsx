@@ -1,17 +1,31 @@
 import rect from "../assets/rect.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Card = () => {
+const Card = ({ project, index }) => {
+  const isEven = index % 2 === 0;
+
   return (
-    <div className="flex flex-row pt-28">
-      <div className="font-instrument-sans pt-8">
+    <div
+      className={`pt-28 flex flex-col ${
+        isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+      } max-w-7xl pb-12 justify-between place-content-between`}
+    >
+      <div
+        className={`font-instrument-sans pt-4 ${
+          isEven ? "text-left" : "text-right"
+        }`}
+      >
         <div className="text-6xl tracking-[-0.3rem]">
           <span className="font-instrument-serif tracking-normal italic">
             (1)
           </span>{" "}
           Code Her Way
         </div>
-        <p className="pt-10 text-2xl text-grey tracking-[-0.075rem] w-3/4">
+        <p
+          className={`pt-10 text-2xl text-grey tracking-[-0.075rem] w-3/4 ${
+            !isEven && "place-self-end"
+          } `}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget
           turpis quis nulla interdum dignissim. Donec sed semper risus.
           Phasellus pellentesque lacus eu ipsum ultricies placerat.
