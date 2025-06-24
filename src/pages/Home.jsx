@@ -4,6 +4,7 @@ import handwriting from "../assets/handwriting.png";
 import Nav from "../components/Nav";
 import { Link } from "react-router";
 import Technologies from "../components/Technologies";
+import Projects from "../components/Projects";
 
 const Home = () => {
   return (
@@ -48,6 +49,7 @@ const Home = () => {
         </Link>
       </div>
       <Technologies />
+      <Projects />
     </>
   );
 };
