@@ -15,8 +15,8 @@ export function NewNav({
     href: "/",
   },
 
-  blog = {
-    href: "/blog",
+  projects = {
+    href: "/projects",
   },
 
   porfolio = {
@@ -73,9 +73,9 @@ export function NewNav({
           <_Builtin.Link
             className={_utils.cx(_styles, "logo-header-2")}
             button={false}
-            options={blog}
+            options={projects}
           >
-            {"BLOG"}
+            {"PROJECTS"}
           </_Builtin.Link>
           <_Builtin.Link
             className={_utils.cx(_styles, "logo-header-2")}
@@ -124,9 +124,9 @@ export function NewNav({
                 className={_utils.cx(_styles, "nav-link-6", "nav-overflow-2")}
                 data-w-id="4018dd8e-2bd5-971d-3766-c9cb3ddeb1a1"
                 button={false}
-                options={blog}
+                options={projects}
               >
-                {"BLOG"}
+                {"PROJECTS"}
               </_Builtin.Link>
               <_Builtin.Link
                 className={_utils.cx(_styles, "nav-link-6", "nav-overflow-2")}

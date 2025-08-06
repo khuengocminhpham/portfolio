@@ -16,7 +16,7 @@ const Home = async () => {
     <>
       <SectionHero />
       <HomeBlog
-        header="BLOG - CODE HER WAY"
+        header="PROJECTS"
         homeBlogComponent={feature.map((post) => (
           <HomeBlogComponent
             key={post._id}
