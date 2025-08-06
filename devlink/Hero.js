@@ -64,9 +64,8 @@ export function Hero({
           >
             {"Step into my world of "}
             <_Builtin.Span className={_utils.cx(_styles, "change-font")}>
-              {"design"}
+              {"design and technology."}
             </_Builtin.Span>
-            {" and female empowerment in tech."}
           </_Builtin.Heading>
           <_Builtin.Link
             className={_utils.cx(_styles, "button")}
