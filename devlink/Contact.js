@@ -114,7 +114,7 @@ export function Contact({ as: _Component = _Builtin.Section, formProps = {} }) {
               className={_utils.cx(_styles, "text-success")}
               tag="div"
             >
-              {"Thank you! Your submission has been received!"}
+              {"Redirecting you..."}
             </_Builtin.Block>
           </_Builtin.FormSuccessMessage>
           <_Builtin.FormErrorMessage

@@ -19,9 +19,8 @@ export function AboutTop({ as: _Component = _Builtin.Section }) {
           data-w-id="7d3e20f7-0844-83c5-b5f4-2cbb3e54d6ea"
           tag="h1"
         >
-          {"Meet The Creator,"}
-          <br />
-          <_Builtin.Emphasized>{"Khue Pham"}</_Builtin.Emphasized>
+          <_Builtin.Emphasized>{"Meet "}</_Builtin.Emphasized>
+          {"Khue Pham"}
         </_Builtin.Heading>
       </_Builtin.Block>
     </_Component>

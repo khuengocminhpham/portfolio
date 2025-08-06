@@ -1,8 +1,10 @@
 "use client";
 import { Contact } from "@/devlink";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const page = () => {
+  const router = useRouter()
   return (
     <Contact
       formProps={{
