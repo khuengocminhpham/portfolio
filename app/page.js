@@ -5,12 +5,10 @@ import {
   SectionHero,
 } from "@/devlink";
 import getAllPosts from "@/lib/getAllPosts";
+import { projects } from "./data/projects";
 
 const Home = async () => {
-  const data = await getAllPosts();
-  const feature = data.filter(({ feature }) => {
-    return feature;
-  });
+  const feature = projects;
 
   return (
     <>
@@ -19,15 +17,16 @@ const Home = async () => {
         header="PROJECTS"
         homeBlogComponent={feature.map((post) => (
           <HomeBlogComponent
-            key={post._id}
-            blogLink={{ href: `/blog/${post._id}` }}
+            key={post.id}
             imageBlog={post.image}
             headingBlog={post.title}
-            catBlog={post.cat}
+            descBlog={post.desc}
+            headingLink={{ href: `/projects/${post.id}` }}
+            skills={post.skills}
           />
         ))}
         buttonText="VIEW ALL"
-        blogBtnLink={{ href: "/blog" }}
+        blogBtnLink={{ href: "/projects" }}
       />
       <SectionCallToAction />
     </>

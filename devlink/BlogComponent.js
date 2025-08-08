@@ -10,15 +10,11 @@ const _interactionsData = JSON.parse(
 
 export function BlogComponent({
   as: _Component = _Builtin.Block,
-  imageBlog = "",
-
-  headingLink = {
-    href: "#",
-  },
-
-  headingBlog = "Heading",
-  catBlog = "This is some text inside of a div block.",
-  view = "This is some text inside of a div block.",
+  imageBlog,
+  headingLink,
+  headingBlog,
+  descBlog,
+  skills,
 }) {
   _interactions.useInteractions(_interactionsData, _styles);
 
@@ -74,15 +70,17 @@ export function BlogComponent({
         </_Builtin.Heading>
         <_Builtin.Block
           className={_utils.cx(_styles, "text-block-3")}
+          style={{ fontStyle: "italic", color: "#ff84e0ff" }}
           tag="div"
         >
-          {catBlog}
+          ({skills.join(", ")})
         </_Builtin.Block>
+        <br />
         <_Builtin.Block
           className={_utils.cx(_styles, "text-block-3")}
           tag="div"
         >
-          {view}
+          {descBlog}
         </_Builtin.Block>
       </_Builtin.Link>
     </_Component>

@@ -46,7 +46,7 @@ export function CallToAction({
         button={true}
         options={ctaLink}
       >
-        {"Check Out the Portfolio"}
+        {"Check Out the Art Portfolio"}
         <br />
       </_Builtin.Link>
       <_Builtin.Block className={_utils.cx(_styles, "color-bg")} tag="div" />

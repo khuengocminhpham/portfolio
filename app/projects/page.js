@@ -5,11 +5,11 @@ import {
   BlogTop,
   SectionCallToAction,
 } from "@/devlink";
-import getAllPosts from "@/lib/getAllPosts";
 import React from "react";
+import { projects } from "../data/projects";
 
 const Projects = async ({ searchParams }) => {
-  const posts = await getAllPosts();
+  const posts = projects;
 
   const page = searchParams["page"] ?? "1";
   const per_page = searchParams["per_page"] ?? "5";
@@ -21,16 +21,16 @@ const Projects = async ({ searchParams }) => {
 
   return (
     <div>
-      <BlogTop headingTopText="BLOG - CODE HER WAY" />
+      <BlogTop headingTopText="Projects" />
       <BlogBody
         blogComponent={data.map((post) => (
           <BlogComponent
-            key={post._id}
+            key={post.id}
             imageBlog={post.image}
             headingBlog={post.title}
-            catBlog={post.cat}
-            headingLink={{ href: `/blog/${post._id}` }}
-            view={" "}
+            descBlog={post.desc}
+            headingLink={{ href: `/projects/${post.id}` }}
+            skills={post.skills}
           />
         ))}
         pagination={<Pagination next={end < posts.length} prev={start > 1} />}

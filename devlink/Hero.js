@@ -44,7 +44,7 @@ export function Hero({
             className={_utils.cx(_styles, "heading-hero-accent")}
             tag="h1"
           >
-            {"A Fusion of Design and Technology"}
+            {"A Fusion of Technology and Design"}
             <br />
           </_Builtin.Heading>
         </_Builtin.Block>
